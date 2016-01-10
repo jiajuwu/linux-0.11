@@ -1,0 +1,4 @@
+CentOS Linux release 7.1.1503 (Core)
+gcc version 4.8.3 20140911 (Red Hat 4.8.3-9) (GCC)
+Compile the linux-0.11 use gcc 4.8.3 version and result is successful.
+
