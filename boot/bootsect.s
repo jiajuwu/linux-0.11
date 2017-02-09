@@ -40,7 +40,7 @@ ENDSEG   = SYSSEG + SYSSIZE		! where to stop loading
 
 ! ROOT_DEV:	0x000 - same type of floppy as boot.
 !		0x301 - first partition on first drive etc
-ROOT_DEV = 0x306
+ROOT_DEV = 0x21d
 
 entry _start
 _start:
@@ -225,11 +225,11 @@ bad_rt:	mov ax,#0
 	pop ax
 	jmp read_track
 
-/*
- * This procedure turns off the floppy drive motor, so
- * that we enter the kernel in a known state, and
- * don't have to worry about it later.
- */
+!/*
+! * This procedure turns off the floppy drive motor, so
+! * that we enter the kernel in a known state, and
+! * don't have to worry about it later.
+! */
 kill_motor:
 	push dx
 	mov dx,#0x3f2
